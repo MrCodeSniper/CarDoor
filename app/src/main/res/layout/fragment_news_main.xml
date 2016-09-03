@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FF6000"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news_str_title"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:id="@+id/textView4" />
+
+     <LinearLayout
+         android:visibility="visible"
+         android:animateLayoutChanges="true"
+         android:gravity="center"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:id="@+id/ll_extra">
+
+         <ImageView
+             android:id="@+id/iv_news_search"
+             android:layout_toLeftOf="@+id/iv_help"
+             android:layout_marginRight="10dp"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_centerVertical="true"
+             android:src="@drawable/bj__ic_home_menu_search"
+             />
+         <ImageView
+             android:id="@+id/iv_help"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_toLeftOf="@+id/iv_msg"
+             android:layout_marginRight="10dp"
+             android:src="@drawable/bj__ic_home_menu_help"
+             android:layout_centerVertical="true"
+
+             />
+
+
+         <ImageView
+             android:id="@+id/iv_msg"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:src="@drawable/bj__ic_home_menu_msg"
+             android:layout_marginRight="10dp"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true" />
+
+     </LinearLayout>
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/bj__ic_home_menu_search_shape"
+                android:layout_centerVertical="true"
+                android:id="@+id/ib_search"
+
+                 />
+
+            <ImageView
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/ib_search"
+                android:id="@+id/iv_search"
+                android:src="@drawable/bj__ic_home_menu_search_p"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:textColor="#ccc"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索您想查找的车系"
+                />
+
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_menu"
+                android:src="@drawable/bj__ic_home_menu_ellipsis"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F6F6F6"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="0"
+            android:background="@drawable/news_ic_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/news_tv_important"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/news_ic_selected"
+                android:gravity="center"
+                android:text="@string/news_str_important"
+                android:textColor="#FF6000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_tv_car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/news_str_car"
+                android:textColor="#7E7E7E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_tv_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/news_str_buy"
+                android:textColor="#7E7E7E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_tv_try"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/news_str_try"
+                android:textColor="#7E7E7E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_tv_picture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/news_str_picture"
+                android:textColor="#7E7E7E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/news_tv_market"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/news_str_market"
+                android:textColor="#7E7E7E"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_weight="0"
+            android:background="@drawable/news_ic_line" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/news_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

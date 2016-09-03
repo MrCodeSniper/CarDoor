@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText
+            android:layout_marginTop="20dp"
+            android:hint="请输入手机号"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:inputType="phone"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:id="@+id/et_phone" />
+
+        <com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText
+            android:hint="请输入密码"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/et_pd"
+            android:layout_gravity="center_horizontal" />
+
+
+
+           <!--<Button-->
+               <!--android:id="@+id/btn_login"-->
+               <!--android:layout_margin="20dp"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_height="wrap_content"-->
+               <!---->
+               <!--android:text="登录"-->
+               <!--android:textColor="#fff"-->
+               <!--/>-->
+
+
+        <com.dd.CircularProgressButton
+            app:cpb_cornerRadius="48dp"
+            android:layout_margin="20dp"
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cpb_textComplete="@string/Complete"
+            app:cpb_textError="@string/Error"
+            app:cpb_textIdle="@string/Upload" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无法登录？"
+                android:textColor="@color/qq_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即注册"
+                android:textColor="@color/qq_color"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_above="@+id/ll_other_login"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="0.5dp"
+            android:background="#ccc"
+            ></View>
+
+
+
+        <TextView
+            android:textColor="#555"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用其他账号登录"
+            />
+
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            ></View>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_other_login"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textColor="@color/qq_color"
+            android:drawablePadding="10dp"
+           android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="腾讯QQ"
+            android:drawableTop="@drawable/bj__dna_result_share_qq"
+            />
+
+
+        <TextView
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/weixin_color"
+            android:text="微信"
+            android:drawableTop="@drawable/bj__dna_result_share_wechat"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

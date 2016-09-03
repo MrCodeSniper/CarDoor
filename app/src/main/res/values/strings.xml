@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">CarsDoor</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="Complete">登录成功</string>
+    <string name="Error">登录失败</string>
+    <string name="Upload">登录</string>
+    <string name="find_str_price">价格</string>
+    <string name="find_str_level">级别</string>
+    <string name="find_str_pai">排量</string>
+    <string name="find_str_bian">变速箱</string>
+
+    <string name="car_str_find">找车</string>
+    <string name="car_str_news">资讯</string>
+    <string name="car_str_price">降价</string>
+    <string name="car_str_question">问答</string>
+    <string name="car_str_self">我的</string>
+    <string name="new_york_city">网页</string>
+    <!-- find -->
+    <string name="find_str_brand">品牌找车</string>
+    <string name="find_str_filter">精准找车</string>
+    <!-- news -->
+    <string name="news_str_title">资讯</string>
+    <string name="news_str_important">要闻</string>
+    <string name="news_str_car">新车</string>
+    <string name="news_str_buy">导购</string>
+    <string name="news_str_try">试车</string>
+    <string name="news_str_picture">图解</string>
+    <string name="news_str_market">行业</string>
+
+
+    <string name="fragment_find_str_price1">5万以下</string>
+    <string name="fragment_find_str_price2">5&#8211;8万</string>
+    <string name="fragment_find_str_price3">8&#8211;12万</string>
+    <string name="fragment_find_str_level1">微型车</string>
+    <string name="fragment_find_str_level2">小型车</string>
+    <string name="fragment_find_str_level3">紧凑型</string>
+    <string name="fragment_find_str_pai1">1.3L以下</string>
+    <string name="fragment_find_str_pai2">1.3L&#8211;1.6L</string>
+    <string name="fragment_find_str_pai3">1.7L&#8211;2.0L</string>
+    <string name="fragment_find_str_bian1">手动挡</string>
+    <string name="fragment_find_str_bian2">自动挡</string>
+    <string name="fragment_find_str_bian3">手自一体</string>
+
+
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <integer name="default_circle_indicator_orientation">0</integer>
+</resources>

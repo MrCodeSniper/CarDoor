@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:background="#fff"
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+    <com.chenhong.android.carsdoor.view.QuickIndexBar
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:id="@+id/qib"
+        android:layout_centerVertical="true"
+        android:layout_width="18dp"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        ></com.chenhong.android.carsdoor.view.QuickIndexBar>
+
+
+    <TextView
+        android:id="@+id/currentindex"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:text="A"
+        android:background="@drawable/bg"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+
+</RelativeLayout>

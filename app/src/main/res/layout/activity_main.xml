@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+     
+    
+    
+    <FrameLayout 
+        android:id="@+id/car_content"
+         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+        </FrameLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <LinearLayout
+       android:background="@drawable/car_bg_tab"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/ll_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+         
+        <LinearLayout
+            android:id="@+id/ll_tab_carnews"
+            android:orientation="vertical"
+                 android:layout_weight="1"
+               android:layout_width="30dp"
+                android:layout_height="match_parent"
+               android:gravity="center"
+            >
+            
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/car_news_selector"
+             
+                ></ImageView>
+            
+            <TextView 
+                android:textColor="@color/car_cl_unchoose"
+                android:text="资讯"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            
+            
+          
+            
+        </LinearLayout>
+        
+        
+        
+         <LinearLayout
+            android:id="@+id/ll_tab_carfind"
+            android:orientation="vertical"
+               android:layout_width="30dp"
+               android:layout_weight="1"
+                android:layout_height="match_parent"
+               android:gravity="center"
+            
+            >
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/car_find_selector"
+             
+                ></ImageView>
+            <TextView 
+                android:textColor="@color/car_cl_unchoose"
+                android:layout_marginTop="5dp"
+                android:text="找车"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        
+        
+          <LinearLayout
+            android:id="@+id/ll_tab_carprice"
+            android:orientation="vertical"
+               android:layout_width="30dp"
+               android:layout_weight="1"
+                android:layout_height="match_parent"
+               android:gravity="center"
+            
+            >
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/car_price_selector"
+             
+                ></ImageView>
+            <TextView 
+                android:textColor="@color/car_cl_unchoose"
+                android:layout_marginTop="5dp"
+                android:text="降价"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+         
+          <LinearLayout
+            android:id="@+id/ll_tab_carquestion"
+            android:orientation="vertical"
+               android:layout_width="30dp"
+               android:layout_weight="1"
+                android:layout_height="match_parent"
+               android:gravity="center"
+            
+            >
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/car_question_selector"
+             
+                ></ImageView>
+            <TextView 
+                android:textColor="@color/car_cl_unchoose"
+                android:layout_marginTop="5dp"
+                android:text="回答"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+         
+          <LinearLayout
+            android:id="@+id/ll_tab_carself"
+            android:orientation="vertical"
+               android:layout_width="30dp"
+               android:layout_weight="1"
+                android:layout_height="match_parent"
+               android:gravity="center"
+            
+            >
+            <ImageView 
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/car_self_selector"
+             
+                ></ImageView>
+            <TextView 
+                android:textColor="@color/car_cl_unchoose"
+                android:layout_marginTop="5dp"
+                android:text="我的"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+         
+        
+        </LinearLayout>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</LinearLayout>

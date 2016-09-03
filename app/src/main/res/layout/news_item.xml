@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/item_iv_img"
+        android:layout_width="105dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/empty_photo" />
+
+    <TextView
+        android:id="@+id/item_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/item_iv_img"
+        android:text="流光溢彩下的经典传承"
+        android:textColor="#313131"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/item_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/item_tv_title"
+        android:layout_alignParentBottom="true"
+        android:text="2013-02-12"
+        android:textColor="#909090"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/item_tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="213"
+        android:textColor="#909090"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/item_tv_count"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/news_ic_comment" />
+
+</RelativeLayout>

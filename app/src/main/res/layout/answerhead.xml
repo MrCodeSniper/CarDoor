@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_margin="8dp"
+                android:id="@+id/iv_account"
+                android:src="@drawable/icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                />
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_account"
+                android:id="@+id/rl_ques_undo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_account"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:src="@drawable/ic_launcher"-->
+                <!--/>-->
+
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户8676180390"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    />
+
+                <TextView
+                    android:textColor="#ccc"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/tv_username"
+                    android:id="@+id/tv_sendtimeandcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10分钟前  来自  广州市"
+                    />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_alignBaseline="@id/iv_account"
+            android:layout_below="@+id/iv_account"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_ques_title"
+            android:text="车年检问题"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ccc"
+            android:layout_below="@+id/tv_ques_title"
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_ques_content"
+            android:text="请问各位亲，我的小车去年买的交强险，商业险，出了一次险赔给对方1200.."
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_answer_count"
+                android:textColor="@color/qq_color"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                />
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:textColor="@color/qq_color"
+                android:layout_width="match_parent"
+                android:text="来自车友问答"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+
+
+    <View
+    android:background="#eee"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"></View>
+
+
+
+</LinearLayout>

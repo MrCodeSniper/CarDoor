@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="0.5dp"
+                    android:background="#ccc"
+                    ></View>
+
+
+
+                <TextView
+                    android:textColor="#555"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择登录方式"
+                    />
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="0.5dp"
+                    android:background="#ccc"
+                    ></View>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/ll_weixin_login"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:background="@drawable/weixin_background"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/account__third_icon_wechat"
+                        />
+
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="80dp"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用微信登录"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:background="@drawable/qq_background"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="280dp"
+                    android:layout_below="@+id/ll_weixin_login"
+                    android:id="@+id/ll_qq_login"
+                    android:layout_height="wrap_content">
+
+
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/account__third_icon_qq"
+                        />
+
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="80dp"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用QQ登录"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:textColor="@color/qq_color"
+            android:clickable="true"
+            android:id="@+id/tv_tel_login"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="或使用手机号登录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+
+
+
+    </RelativeLayout>

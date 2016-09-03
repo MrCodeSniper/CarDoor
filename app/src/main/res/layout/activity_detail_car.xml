@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/activity_bar"></include>
+
+
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:layout_below="@+id/layout_title"
+        android:id="@+id/tl_8"
+        android:layout_height="48dp"
+        android:background="#FF6000"
+        tl:tl_indicator_color="#eeeeee"
+        tl:tl_indicator_style="TRIANGLE"
+        android:layout_width="match_parent"
+     ></com.flyco.tablayout.SlidingTabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/tl_8"
+        android:id="@+id/vp"
+        android:layout_above="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_above="@+id/ll_bottom_price"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ccc"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_price"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+     <LinearLayout
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:gravity="center"
+         android:padding="10dp"
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:layout_height="match_parent">
+
+
+         <ImageView
+             android:layout_width="18dp"
+             android:layout_height="18dp"
+             android:src="@drawable/mcbd__bottom_share"
+             />
+
+
+         <TextView
+             android:textSize="13sp"
+             android:layout_marginTop="5dp"
+             android:text="分享"
+             android:textColor="#ccc"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+
+     </LinearLayout>
+
+
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="0.5dp"
+            android:background="#ccc"
+            android:layout_height="30dp"></View>
+
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+      <ImageView
+          android:layout_marginBottom="1dp"
+          android:id="@+id/iv_red_price"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/mcbd__ic_query_price_red"
+          android:layout_alignBottom="@+id/textView"
+          android:layout_alignLeft="@+id/textView2"
+          android:layout_alignStart="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="询底价"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/iv_red_price"
+            android:textColor="@color/qq_back_color"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地经销商为您报价"
+            android:textColor="#ccc"
+            android:layout_below="@+id/textView"
+            android:id="@+id/textView2" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

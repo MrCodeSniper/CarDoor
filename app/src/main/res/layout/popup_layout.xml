@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="130dp"
+    android:gravity="center"
+    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:layout_height="80dp">
+
+  <LinearLayout
+      android:layout_marginLeft="10dp"
+      android:id="@+id/help"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageView
+          android:layout_width="20dp"
+          android:layout_height="match_parent"
+          android:src="@drawable/bj__ic_home_menu_bxc_p"
+          />
+     <TextView
+         android:textColor="#333"
+         android:textSize="16sp"
+         android:layout_marginLeft="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="帮选车"
+         />
+
+
+  </LinearLayout>
+
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="110dp"
+        android:layout_height="0.5dp"
+        android:background="#ccc"></View>
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/msg"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bj__ic_home_menu_msg_p"
+            />
+        <TextView
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息中心"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

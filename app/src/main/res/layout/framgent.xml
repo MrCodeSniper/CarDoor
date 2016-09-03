@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="降价专题"
+            android:textColor="#FF6000"
+            android:textSize="20sp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ccc"
+        ></View>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:background="#fff"
+        android:id="@+id/srlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <android.support.v7.widget.RecyclerView
+            android:background="#fff"
+            android:id="@+id/app_recyclerview"
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    <include layout="@layout/include_no_data"></include>
+
+</LinearLayout>

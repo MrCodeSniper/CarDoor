@@ -1,0 +1,106 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<com.chenhong.android.carsdoor.view.parallax.ParallaxScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:overScrollMode="never"
+    app:zoomRatio="1.4"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView1"
+    android:layout_above="@+id/rl_bottom"
+    android:fillViewport="true"
+    android:layout_width="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:src="@drawable/message__ic_theme3"
+            android:id="@+id/iv_theme"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            />
+
+        <!--<View-->
+            <!--android:background="#eee"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="5dp"></View>-->
+
+
+        <ListView
+            android:clickable="false"
+            android:id="@+id/lv_answer"
+            android:dividerHeight="1dp"
+            android:divider="#eee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </ListView>
+
+
+ </LinearLayout>
+
+
+
+
+
+
+</com.chenhong.android.carsdoor.view.parallax.ParallaxScrollView>
+
+
+
+     <View
+         android:layout_above="@+id/rl_bottom"
+         android:background="#eee"
+         android:layout_width="fill_parent"
+         android:layout_height="0.5dp"></View>
+
+
+
+
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/discuss_submit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="发表"
+            android:layout_marginRight="10dp"
+            />
+        <EditText
+            android:id="@+id/discuss"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/discuss_submit"
+            android:hint="评论"
+            android:singleLine="true"
+            android:textSize="18sp" >
+        </EditText>
+    </RelativeLayout>
+
+</RelativeLayout>

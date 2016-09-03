@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/activity_bar"></include>
+
+
+
+     <RelativeLayout
+         android:background="#fff"
+         android:id="@+id/rl_icon"
+         android:layout_marginTop="20dp"
+         android:layout_width="match_parent"
+         android:layout_height="60dp">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="头像"
+             android:layout_marginLeft="10dp"
+             android:layout_centerVertical="true"
+             />
+       <ImageView
+           android:src="@drawable/account__arrow_right"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="3dp"
+
+
+           android:id="@+id/imageView" />
+
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/iv_icon"
+             android:src="@drawable/bj__dna_result_avatar_male"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@+id/imageView"
+             android:layout_toStartOf="@+id/imageView" />
+
+
+     </RelativeLayout>
+
+
+    <View
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+
+    <RelativeLayout
+        android:background="#fff"
+        android:id="@+id/rl_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/textView3" />
+
+        <ImageView
+            android:src="@drawable/account__arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+
+
+            android:id="@+id/imageView2" />
+
+
+        <TextView
+            android:id="@+id/tv_nick"
+            android:layout_marginRight="10dp"
+            android:textColor="#bbb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageView2" />
+
+
+    </RelativeLayout>
+    <View
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+
+    <RelativeLayout
+        android:background="#fff"
+        android:id="@+id/rl_sex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+
+
+        <ImageView
+            android:src="@drawable/account__arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+
+
+            android:id="@+id/imageView3" />
+
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_marginRight="10dp"
+            android:textColor="#bbb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_toLeftOf="@+id/imageView3"
+            android:layout_toStartOf="@+id/imageView3" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"></View>
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:id="@+id/rl_location"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地区"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+
+
+        <ImageView
+
+            android:src="@drawable/account__arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+
+
+            android:id="@+id/imageView4" />
+
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_marginRight="10dp"
+            android:textColor="#bbb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地区"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_toLeftOf="@+id/imageView4"
+            android:layout_toStartOf="@+id/imageView4" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_unregister"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_cancle_background"
+        android:text="注销登陆"
+        android:textColor="#fff"
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/fragment_find_pai_btn_pai1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/find_filter_item_bg"
+            android:gravity="center"
+            android:text="@string/fragment_find_str_pai1"
+            android:textColor="#454545"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/fragment_find_pai_btn_pai2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/find_filter_item_bg"
+            android:gravity="center"
+            android:text="@string/fragment_find_str_pai2"
+            android:textColor="#454545"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/fragment_find_pai_btn_pai3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/find_filter_item_bg"
+            android:gravity="center"
+            android:text="@string/fragment_find_str_pai3"
+            android:textColor="#454545"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

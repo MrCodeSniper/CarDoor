@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll_all"
+    android:layout_height="wrap_content">
+
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+
+       <ImageView
+           android:id="@+id/iv_title"
+           android:scaleType="fitXY"
+           android:src="@drawable/mygrid"
+           android:layout_width="match_parent"
+           android:layout_height="120dp" />
+
+       <ImageView
+           android:layout_margin="10dp"
+           android:layout_alignBottom="@+id/iv_title"
+           android:layout_width="35dp"
+           android:layout_height="35dp"
+           android:src="@drawable/play2_nor"
+          />
+
+   </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#333"
+        android:text="易车体验 赵璞带你五分钟看懂现代领动"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/play_times"
+            />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="539553"
+            android:layout_marginLeft="5dp"
+            android:textColor="#bbb"
+            />
+
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/time_nor"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05:39"
+            android:layout_marginLeft="5dp"
+            android:textColor="#bbb"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

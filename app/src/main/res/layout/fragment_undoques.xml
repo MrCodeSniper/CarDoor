@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#eef"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问答社区"
+            android:textColor="#FF6000"
+            android:textSize="20sp" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_send_ques"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="提问"-->
+            <!--android:textColor="#FF6000"-->
+            <!--android:textSize="16sp"-->
+            <!--/>-->
+
+    </RelativeLayout>
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ccc"
+        ></View>
+
+
+
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_ques"
+                android:padding="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/ll_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/tv_leiji"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="累计解决问题"
+                                android:textColor="#bbb"
+                                android:textSize="17sp"
+                                />
+                            <com.chenhong.android.carsdoor.view.RiseNumberView.NumberScrollTextView
+                                android:id="@+id/tv_leiji_num"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/tv_leiji"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/news_cl_choose"
+                                android:text="121673"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <View android:layout_width="0.5dp"
+                            android:layout_height="40dp"
+                            android:background="#ccc"
+                            android:layout_gravity="center"
+                            ></View>
+
+
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/tv_jinri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日解决问题"
+                                android:textColor="#bbb"
+                                android:textSize="17sp"
+                                />
+                            <com.chenhong.android.carsdoor.view.RiseNumberView.NumberScrollTextView
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/tv_jinri"
+                                android:textSize="20sp"
+                                android:id="@+id/tv_jinri_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/news_cl_choose"
+                                android:text="101"
+                                />
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_commit"
+            fab:fab_colorNormal="@color/primary"
+            fab:fab_colorPressed="@color/primary_pressed"
+            fab:fab_colorRipple="@color/ripple"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <include layout="@layout/include_no_data"></include>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

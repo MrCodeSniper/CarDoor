@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="car_cl_unchoose">#595959</color>
+    <color name="car_cl_choose">#FF6000</color>
+    <color name="news_title_choose">#c8e7b496</color>
+
+    <color name="news_title_unchoose">#00000000</color>
+    <!-- news -->
+    <color name="news_cl_unchoose">#7E7E7E</color>
+    <color name="news_cl_choose">#FF6000</color>
+
+    <!-- find -->
+    <color name="find_cl_unchoose">#FF6000</color>
+    <color name="find_cl_choose">#FFFFFF</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="item_bg">#e5e5e5</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#23000000</color>
+    <color name="gap_line">#e2e2e2</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_777572">#777572</color>
+
+    <color name="actionsheet_blue">#037BFF</color>
+
+    <color name="actionsheet_red">#FD4A2E</color>
+
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="weixin_color">#62b900</color>
+
+    <color name="qq_color">#21AAE5</color>
+
+    <color name="text_color">#A1E0F7</color>
+
+
+    <color name="qq_back_color">#FF6262</color>
+
+</resources>

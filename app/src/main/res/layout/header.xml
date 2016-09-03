@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+    <ImageView
+    android:id="@+id/image_header"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:src="@drawable/message__ic_theme4" />
+
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        />
+
+
+    </RelativeLayout>

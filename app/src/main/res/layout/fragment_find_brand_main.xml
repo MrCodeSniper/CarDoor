@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_total"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    
+    
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ptr"
+        app:ptr_duration_to_close="200"
+        app:ptr_duration_to_close_header="1000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_pull_to_fresh="false"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+    <com.chenhong.android.carsdoor.view.QuickIndexBar
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:id="@+id/qib"
+        android:layout_centerVertical="true"
+        android:layout_width="18dp"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        ></com.chenhong.android.carsdoor.view.QuickIndexBar>
+
+    <TextView
+        android:id="@+id/currentindex"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:text="A"
+        android:background="@drawable/bg"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+
+    <LinearLayout
+        android:id="@+id/find_brand_llyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/left_shadow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/find_cover_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@drawable/listview_item_bg"
+             />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

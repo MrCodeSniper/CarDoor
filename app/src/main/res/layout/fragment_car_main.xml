@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+        android:id="@+id/load_more_list_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cube_mints_white">
+
+
+
+
+
+
+    <!--<com.bigkoo.convenientbanner.ConvenientBanner-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/convenientBanner"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--app:canLoop="true"-->
+    <!--/>-->
+
+
+    <ListView
+        android:layout_below="@+id/convenientBanner"
+        android:id="@+id/lv_newcar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+    </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+    <include layout="@layout/include_no_data"></include>
+</RelativeLayout>

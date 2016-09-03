@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_width="120dp"
+        android:src="@drawable/carserch"
+        android:layout_height="100dp" />
+
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/iv_title"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_name"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="捷达"
+
+            />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/actionsheet_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.99-12.08万"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:text="询底价"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

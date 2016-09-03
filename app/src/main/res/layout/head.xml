@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_leiji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计解决问题"
+                android:textColor="#bbb"
+                android:textSize="17sp"
+                />
+            <com.chenhong.android.carsdoor.view.RiseNumberView.NumberScrollTextView
+                android:id="@+id/tv_leiji_num"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_leiji"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_cl_choose"
+                android:text="121673"
+                />
+
+
+        </RelativeLayout>
+
+        <View android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:background="#ccc"
+            android:layout_gravity="center"
+            ></View>
+
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_jinri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日解决问题"
+                android:textColor="#bbb"
+                android:textSize="17sp"
+                />
+            <com.chenhong.android.carsdoor.view.RiseNumberView.NumberScrollTextView
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_jinri"
+                android:textSize="20sp"
+                android:id="@+id/tv_jinri_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_cl_choose"
+                android:text="101"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <View
+        android:background="#ccc"
+        android:layout_width="match_parent"
+         android:layout_height="0.5dp"></View>
+
+</LinearLayout>

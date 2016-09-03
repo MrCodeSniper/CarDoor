@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/activity_bar"
+        >
+    </include>
+
+
+    <com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText
+        android:layout_marginTop="20dp"
+        android:hint="请输入手机号"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:inputType="phone"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:id="@+id/et_phone" />
+
+    <com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText
+        android:hint="请输入密码"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/et_pd"
+        android:layout_gravity="center_horizontal" />
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+
+           <com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText
+               android:hint="输入手机验证码"
+               android:layout_width="360dp"
+               android:layout_height="60dp"
+               android:inputType="phone"
+               android:layout_centerHorizontal="true"
+               android:ems="10"
+               android:id="@+id/et_yanzhen" />
+
+
+
+
+
+           <TextView
+               android:id="@+id/tv_getyanzhen"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="获取手机验证码"
+               android:layout_marginRight="15dp"
+               android:textSize="17sp"
+               android:textColor="@color/qq_color"
+               />
+
+
+
+
+
+
+
+
+       </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background"
+        android:text="立即注册"
+        android:textColor="#fff"
+
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="#FF6000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bj__ic_arrow_08"
+            />
+
+        <TextView
+            android:id="@+id/tv_login_text"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提问内容"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_send"
+           android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布"
+            android:textColor="#fff"
+            />
+
+    </RelativeLayout>
+
+    <EditText
+        android:padding="10dp"
+        android:hint="标题"
+        android:background="@null"
+        style="?android:attr/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/et_title" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ccc"></View>
+
+    <EditText
+        android:padding="10dp"
+        android:hint="请输入提问内容"
+        android:background="@null"
+        style="?android:attr/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_content" />
+
+</LinearLayout>

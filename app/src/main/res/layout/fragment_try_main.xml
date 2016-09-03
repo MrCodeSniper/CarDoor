@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:orientation="vertical" >
+
+
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:background="#fff"
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ListView
+            android:dividerHeight="10dp"
+            android:divider="#ddd"
+            android:id="@+id/lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_container"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+
+               <!---->
+
+
+
+
+
+                 <!--<LinearLayout-->
+                     <!--android:layout_marginTop="10dp"-->
+                     <!--android:background="#fff"-->
+                     <!--android:orientation="vertical"-->
+                     <!--android:layout_width="match_parent"-->
+                     <!--android:layout_height="wrap_content">-->
+
+
+                     <!--<TextView-->
+                         <!--android:id="@+id/tv_yuanchuang"-->
+                         <!--android:padding="10dp"-->
+                         <!--android:layout_width="wrap_content"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:text="原创节目"-->
+                         <!--android:textSize="20sp"-->
+                         <!--android:textColor="#000"-->
+                         <!--/>-->
+
+
+                     <!--<GridView-->
+                         <!--android:id="@+id/gv_yuanchuang"-->
+                         <!--android:layout_margin="5dp"-->
+                         <!--android:layout_width="match_parent"-->
+                         <!--android:numColumns="2"-->
+                         <!--android:verticalSpacing="10dp"-->
+                         <!--android:horizontalSpacing="10dp"-->
+                         <!--android:layout_height="wrap_content">-->
+
+                     <!--</GridView>-->
+
+
+
+
+
+                 <!--</LinearLayout>-->
+
+
+
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="#fff"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_newcar"-->
+                        <!--android:padding="10dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="新车视频"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000"-->
+                        <!--/>-->
+
+
+                    <!--<GridView-->
+                        <!--android:id="@+id/gv_newcar"-->
+                        <!--android:layout_margin="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:numColumns="2"-->
+                        <!--android:verticalSpacing="10dp"-->
+                        <!--android:horizontalSpacing="10dp"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                    <!--</GridView>-->
+
+
+
+
+
+                <!--</LinearLayout>-->
+
+
+
+               <!---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+    <include layout="@layout/include_no_data"></include>
+</RelativeLayout>

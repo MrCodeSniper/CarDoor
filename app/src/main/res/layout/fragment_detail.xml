@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/iv_title"
+    android:scaleType="fitXY"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:src="@drawable/car"
+    />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="奥迪Q5"
+        android:textSize="24sp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_typeandpailiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中型SUV | 2.0T"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="32.77-50.9万"
+        android:textSize="30sp"
+        android:textColor="@color/qq_back_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ccc"></View>
+
+
+
+
+
+</LinearLayout>
