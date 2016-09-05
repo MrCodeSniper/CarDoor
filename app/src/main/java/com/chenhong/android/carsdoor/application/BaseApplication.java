@@ -14,7 +14,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import cn.bmob.v3.Bmob;
 import cn.jpush.android.api.JPushInterface;
 import cn.sharesdk.framework.ShareSDK;
-import cn.smssdk.SMSSDK;
 
 
 public abstract class BaseApplication extends Application {
@@ -51,6 +50,9 @@ public abstract class BaseApplication extends Application {
 		ImageLoader.getInstance().init(configuration);
 		//初始化sharesdk
 		ShareSDK.initSDK(this);
+
+
+
 	}
 
 	public abstract BaseExceptionHandler getDefaultUncaughtExceptionHandler();

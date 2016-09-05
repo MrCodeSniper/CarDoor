@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/show_points_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:text="显示您的当前积分"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/show_points_btn"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:text="获得当前积分"
+        android:textColor="#FF000000"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/add_points_btn"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:text="加积分"
+        android:textColor="#FF000000"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/spend_points_btn"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:text="减积分"
+        android:textColor="#FF000000"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/show_offer_btn"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:text="显示积分墙"
+        android:textColor="#FF000000"
+        android:textSize="20dip" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dip"
+        android:text="当前MogoID:"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip" />
+    <TextView
+        android:id="@+id/mogoid_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dip"
+        android:text="显示您的当前积分"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip" />
+
+</LinearLayout>

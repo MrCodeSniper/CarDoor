@@ -26,6 +26,6 @@
 
 
 
-  <include layout="@layout/include_no_data"></include>
+
 
 </RelativeLayout>

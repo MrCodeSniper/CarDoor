@@ -5,33 +5,26 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.chenhong.android.carsdoor.R;
 import com.chenhong.android.carsdoor.activity.LoginActivity;
 import com.chenhong.android.carsdoor.activity.SelfDetailActivity;
+import com.chenhong.android.carsdoor.activity.SettingActivity;
 import com.chenhong.android.carsdoor.entity._User;
-import com.chenhong.android.carsdoor.fragment.selffragments.LoginFragment;
-import com.chenhong.android.carsdoor.fragment.selffragments.LoginSecondFragment;
 import com.chenhong.android.carsdoor.global.Constant;
-import com.chenhong.android.carsdoor.view.FixedEditText.FixedEditText;
 import com.chenhong.android.carsdoor.view.parallax.ParallaxScrollView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.datatype.BmobFile;
 
 
 /**
@@ -50,6 +43,9 @@ public class SelfFragment extends BaseFragment {
 	private TextView tv_city;
 	@ViewInject(R.id.iv_account)
 	private ImageView iv_account;
+	@ViewInject(R.id.rl_setting)
+	private RelativeLayout rl_setting;
+
 
 	@ViewInject(R.id.ll_login)
 	private RelativeLayout rl_login;
@@ -113,9 +109,17 @@ public class SelfFragment extends BaseFragment {
 //				tv_city.setText((String) BmobUser.getObjectByKey("city"));
 //			}
 //	}
+		rl_setting.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(getActivity(), SettingActivity.class);
+				startActivity(intent);
+			}
+		});
 
 
-}
+
+	}
 
 
 	private Fragment getRootFragment() {

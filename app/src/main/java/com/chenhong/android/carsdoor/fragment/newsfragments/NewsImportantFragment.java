@@ -1,13 +1,6 @@
 package com.chenhong.android.carsdoor.fragment.newsfragments;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,32 +8,27 @@ import android.view.ViewTreeObserver;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
-
 
 import com.chenhong.android.carsdoor.R;
-import com.chenhong.android.carsdoor.activity.MainActivity;
 import com.chenhong.android.carsdoor.activity.PictureActivity;
 import com.chenhong.android.carsdoor.adapter.NewsImportantAdapter;
 import com.chenhong.android.carsdoor.entity.NewsTitle;
 import com.chenhong.android.carsdoor.entity.news_important;
-import com.chenhong.android.carsdoor.exception.DataNotFoundException;
 import com.chenhong.android.carsdoor.fragment.BaseFragment;
 import com.chenhong.android.carsdoor.fragment.NewsFragment;
 import com.chenhong.android.carsdoor.global.Constant;
-import com.chenhong.android.carsdoor.interf.OnScrollYListener;
-
 import com.chenhong.android.carsdoor.utils.CacheUtils;
 import com.chenhong.android.carsdoor.utils.MyUtils;
 import com.chenhong.android.carsdoor.utils.NetWorkUtils;
 import com.chenhong.android.carsdoor.view.CustomPtrHeader;
 import com.chenhong.android.carsdoor.view.MyScrollPager;
 import com.chenhong.android.carsdoor.view.cycleview.ImageCycleView;
-import com.lidroid.xutils.db.annotation.Check;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.nostra13.universalimageloader.core.ImageLoader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
@@ -64,8 +52,8 @@ public class NewsImportantFragment extends BaseFragment{
 	private PtrFrameLayout mPtrFrameLayout;
 	@ViewInject(R.id.load_more_list_view_container)
 	private LoadMoreListViewContainer loadMoreListViewContainer;
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
+
 
 
 	private CustomPtrHeader header;
@@ -239,7 +227,7 @@ public class NewsImportantFragment extends BaseFragment{
 							curPage = 0;
 							newslist.clear();
 							lv_news_imp.setVisibility(View.VISIBLE);
-							layout_nodata.setVisibility(View.GONE);
+//							layout_nodata.setVisibility(View.GONE);
 						}
 						newslist.addAll(list);
 						if(adapter!=null){
@@ -275,7 +263,7 @@ public class NewsImportantFragment extends BaseFragment{
 					if(actionType == STATE_REFRESH){
 						mPtrFrameLayout.refreshComplete();
 						lv_news_imp.setVisibility(View.GONE);
-						layout_nodata.setVisibility(View.VISIBLE);
+
 					}else if(actionType == STATE_MORE) {
 						if (isUpdate) {
 							loadMoreListViewContainer.loadMoreFinish(true,false);

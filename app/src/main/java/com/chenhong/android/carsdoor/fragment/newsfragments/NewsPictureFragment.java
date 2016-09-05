@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.chenhong.android.carsdoor.R;
@@ -15,7 +14,6 @@ import com.chenhong.android.carsdoor.adapter.SimpleRecyclerCardAdapter;
 import com.chenhong.android.carsdoor.entity.news_important;
 import com.chenhong.android.carsdoor.fragment.BaseFragment;
 import com.chenhong.android.carsdoor.utils.CacheUtils;
-import com.chenhong.android.carsdoor.utils.MyUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
@@ -40,8 +38,8 @@ public class NewsPictureFragment extends BaseFragment implements SwipeRefreshLay
 	private Handler handler=new Handler(){
 
 	};
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
+
 
 	@ViewInject(R.id.srlayout)
 	private SwipeRefreshLayout refreshLayout;
@@ -107,7 +105,6 @@ public class NewsPictureFragment extends BaseFragment implements SwipeRefreshLay
 					}
 					refreshLayout.setRefreshing(false);
 					mRecyclerView.setVisibility(View.VISIBLE);
-					layout_nodata.setVisibility(View.GONE);
 					handler.post(new Runnable() {
 						@Override
 						public void run() {
@@ -129,7 +126,7 @@ public class NewsPictureFragment extends BaseFragment implements SwipeRefreshLay
 					);
 				} else {
 					mRecyclerView.setVisibility(View.GONE);
-					layout_nodata.setVisibility(View.VISIBLE);
+
 					refreshLayout.setRefreshing(false);
 					Log.i("bmob", "失败：" + e.getMessage() + "," + e.getErrorCode());
 				}

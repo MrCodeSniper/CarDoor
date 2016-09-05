@@ -168,7 +168,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <include layout="@layout/include_no_data"></include>
+
 
 
     </RelativeLayout>

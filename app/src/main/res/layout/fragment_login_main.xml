@@ -231,6 +231,40 @@
     </LinearLayout>
 
 
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp"
+            android:layout_weight="0.05">
+
+            <ImageView
+
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/bj__me_fragment_setting"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_shezhi"
+                android:layout_toRightOf="@+id/iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="设置"
+                android:textSize="20sp"
+                />
+
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 

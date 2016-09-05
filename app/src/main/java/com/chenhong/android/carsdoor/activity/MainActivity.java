@@ -3,32 +3,18 @@ package com.chenhong.android.carsdoor.activity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.app.Service;
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewTreeObserver;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.SimpleAdapter;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
@@ -36,29 +22,16 @@ import android.widget.Toast;
 
 import com.chenhong.android.carsdoor.R;
 import com.chenhong.android.carsdoor.entity.Version;
-import com.chenhong.android.carsdoor.entity.car_logo;
-import com.chenhong.android.carsdoor.fragment.FindFragment;
-import com.chenhong.android.carsdoor.fragment.NewsFragment;
-import com.chenhong.android.carsdoor.fragment.PriceFragment;
-import com.chenhong.android.carsdoor.fragment.QuestionFragment;
-import com.chenhong.android.carsdoor.fragment.SelfFragment;
 import com.chenhong.android.carsdoor.global.Common;
 import com.chenhong.android.carsdoor.interf.OnTabReselectListener;
-import com.chenhong.android.carsdoor.interfa.BmobCallback;
-import com.chenhong.android.carsdoor.module.QueryData;
 import com.chenhong.android.carsdoor.ui.MainTab;
 import com.chenhong.android.carsdoor.utils.FileUtils;
 import com.chenhong.android.carsdoor.utils.MyUtils;
-import com.chenhong.android.carsdoor.view.parallax.OnTouchEventListener;
-
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.DownloadFileListener;
 import cn.bmob.v3.listener.QueryListener;
@@ -126,8 +99,7 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
         initDensityDpi();
 
 
-//        QueryData queryData=new QueryData();
-//        queryData.setBmobCallback(new BmobCallback() {
+//        QueryData queryData=new QueryData(new BmobCallback() {
 //            @Override
 //            public void LoadComplete(List list) {
 //                Log.e("taqqq",list.size()+"");
@@ -139,11 +111,13 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
 //            }
 //
 //            @Override
-//            public void LoadStart() {
-//
+//            public void LoadStart(BmobQuery query) {
+//                Log.e("taqqq","加载开始");
+//                query.order("-bid");
+//                query.setSkip(0);
 //            }
 //        });
-//        queryData.queryfirstdata();
+//        queryData.queryFirstData();
 
 
 

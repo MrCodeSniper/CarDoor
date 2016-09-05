@@ -1,43 +1,28 @@
 package com.chenhong.android.carsdoor.fragment;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenhong.android.carsdoor.R;
 import com.chenhong.android.carsdoor.activity.AnswerActivity;
 import com.chenhong.android.carsdoor.activity.LoginActivity;
-import com.chenhong.android.carsdoor.activity.MapActivity;
 import com.chenhong.android.carsdoor.activity.SendQuestionActivity;
-import com.chenhong.android.carsdoor.adapter.MyQuesRecyclerAdapter;
-import com.chenhong.android.carsdoor.adapter.NewsImportantAdapter;
-import com.chenhong.android.carsdoor.adapter.QuestionsAdapter;
 import com.chenhong.android.carsdoor.adapter.QuickQuesAdapter;
 import com.chenhong.android.carsdoor.entity.Questions;
 import com.chenhong.android.carsdoor.entity._User;
-import com.chenhong.android.carsdoor.entity.news_important;
 import com.chenhong.android.carsdoor.global.Constant;
-import com.chenhong.android.carsdoor.utils.CacheUtils;
 import com.chenhong.android.carsdoor.utils.MyUtils;
-import com.chenhong.android.carsdoor.view.CircleRefreshLayout;
-import com.chenhong.android.carsdoor.view.CustomPtrHeader;
 import com.chenhong.android.carsdoor.view.RiseNumberView.NumberScrollTextView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.melnykov.fab.FloatingActionButton;
-
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -50,12 +35,6 @@ import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobDate;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
-import in.srain.cube.views.loadmore.LoadMoreContainer;
-import in.srain.cube.views.loadmore.LoadMoreHandler;
-import in.srain.cube.views.loadmore.LoadMoreListViewContainer;
-import in.srain.cube.views.ptr.PtrDefaultHandler;
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
 
 
 /**
@@ -77,8 +56,8 @@ public class QuestionFragment extends BaseFragment implements SwipeRefreshLayout
 	private int count=10;
 	private int curPage = 0;		// 当前页的编号，从0开始
 
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
+
 
 //	private CustomPtrHeader header;
 	private QuickQuesAdapter adapter;
@@ -206,7 +185,6 @@ public class QuestionFragment extends BaseFragment implements SwipeRefreshLayout
 							curPage = 0;
 							questionses.clear();
 							lv_ques.setVisibility(View.VISIBLE);
-							layout_nodata.setVisibility(View.GONE);
 						}
 						questionses.addAll(list);
 						if(adapter!=null){
@@ -258,7 +236,7 @@ public class QuestionFragment extends BaseFragment implements SwipeRefreshLayout
 						Log.e("tazzz",e.getMessage()+"");
 						swipeRefreshLayout.setRefreshing(false);
 						lv_ques.setVisibility(View.GONE);
-						layout_nodata.setVisibility(View.VISIBLE);
+
 					}else if(actionType == STATE_MORE) {
 						if (isUpdate) {
 //							loadMoreListViewContainer.loadMoreFinish(true,false);

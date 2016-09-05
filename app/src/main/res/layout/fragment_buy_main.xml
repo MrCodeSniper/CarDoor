@@ -32,5 +32,5 @@
         </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
     </in.srain.cube.views.ptr.PtrFrameLayout>
 
-    <include layout="@layout/include_no_data"></include>
+
 </RelativeLayout>

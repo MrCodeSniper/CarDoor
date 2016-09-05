@@ -1,35 +1,20 @@
 package com.chenhong.android.carsdoor.fragment.newsfragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.chenhong.android.carsdoor.R;
-import com.chenhong.android.carsdoor.activity.NewsDetailActivity;
-import com.chenhong.android.carsdoor.activity.PictureActivity;
-import com.chenhong.android.carsdoor.adapter.CarLogoAdapter;
 import com.chenhong.android.carsdoor.adapter.CarVideoAdapter;
-import com.chenhong.android.carsdoor.entity.NewsTitle;
 import com.chenhong.android.carsdoor.entity.NewsVideo;
-import com.chenhong.android.carsdoor.entity.car_logo;
-import com.chenhong.android.carsdoor.exception.DataNotFoundException;
 import com.chenhong.android.carsdoor.fragment.BaseFragment;
-import com.chenhong.android.carsdoor.global.Constant;
 import com.chenhong.android.carsdoor.view.CustomPtrHeader;
 import com.chenhong.android.carsdoor.view.InGridView;
-import com.chenhong.android.carsdoor.view.cycleview.ImageCycleView;
 import com.lidroid.xutils.view.annotation.ViewInject;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +22,6 @@ import java.util.List;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
-import in.srain.cube.views.loadmore.LoadMoreListViewContainer;
 import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
@@ -51,8 +35,7 @@ public class NewsTryFragment extends BaseFragment
 {
 	@ViewInject(R.id.load_more_list_view_ptr_frame)
 	private PtrFrameLayout mPtrFrameLayout;
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
 
 	@ViewInject(R.id.lv_content)
 	private ListView lv_content;

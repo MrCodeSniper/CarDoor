@@ -1,9 +1,8 @@
 package com.chenhong.android.carsdoor.interfa;
 
-import com.chenhong.android.carsdoor.entity.car_logo;
-
 import java.util.List;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 
 /**
@@ -15,6 +14,6 @@ public interface BmobCallback<T>{
 
     void LoadError(BmobException e);
 
-    void LoadStart();
+    void LoadStart(BmobQuery<T> query);
 
 }

@@ -1,14 +1,10 @@
 package com.chenhong.android.carsdoor.module;
 
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 
-import com.chenhong.android.carsdoor.adapter.CarLogoAdapter;
-import com.chenhong.android.carsdoor.entity.car_logo;
+import com.chenhong.android.carsdoor.entity.NewsBuy;
 import com.chenhong.android.carsdoor.interfa.BmobCallback;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -22,41 +18,30 @@ public class QueryData {
 
     private BmobCallback bmobCallback;
 
-    public void setBmobCallback(BmobCallback bmobCallback){
-        this.bmobCallback=bmobCallback;
-    }
 
 
-   public boolean queryfirstdata() {
-        boolean result;
-        BmobQuery<car_logo> query = new BmobQuery<car_logo>();
-        query.order("cid");
-        query.addWhereGreaterThanOrEqualTo("cid", 1);
-        query.setLimit(60);
-        //执行查询方法
-        if(bmobCallback!=null){
-            bmobCallback.LoadStart();
-            query.findObjects(new FindListener<car_logo>() {
-                @Override
-                public void done(List<car_logo> list, final BmobException e) {
-                    if (e == null) {
-                        bmobCallback.LoadComplete(list);
-                    } else {
-                        bmobCallback.LoadError(e);
-                    }
+
+   public void queryFirstData() {
+        BmobQuery<NewsBuy> query = new BmobQuery<NewsBuy>();
+//        query.order("-bid");
+//       query.setSkip(0);
+       Log.e("tazzz","onLoadStart");
+       bmobCallback.LoadStart(query);
+       query.findObjects(new FindListener<NewsBuy>() {
+           @Override
+           public void done(List<NewsBuy> list, BmobException e) {
+                if(e==null){
+                    Log.e("tazzz","onLoadComplete");
+                  bmobCallback.LoadComplete(list);
+                }else {
+                    Log.e("tazzz","onLoadError");
+                    bmobCallback.LoadError(e);
                 }
-            });
-           result=true;
-        }else {
-            result=false;
-        }
-        return result;
+           }
+       });
     }
 
-
-
-
-
-
-
+    public QueryData(BmobCallback bmobCallback) {
+        this.bmobCallback = bmobCallback;
+    }
 }

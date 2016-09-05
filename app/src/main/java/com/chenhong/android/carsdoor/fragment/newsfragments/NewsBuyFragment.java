@@ -2,30 +2,20 @@ package com.chenhong.android.carsdoor.fragment.newsfragments;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.chenhong.android.carsdoor.R;
 import com.chenhong.android.carsdoor.adapter.NewsBuyAdapter;
-import com.chenhong.android.carsdoor.adapter.NewsImportantAdapter;
-import com.chenhong.android.carsdoor.cache.BmobCache;
-import com.chenhong.android.carsdoor.entity.NewCar;
 import com.chenhong.android.carsdoor.entity.NewsBuy;
-import com.chenhong.android.carsdoor.entity.news_important;
 import com.chenhong.android.carsdoor.fragment.BaseFragment;
+import com.chenhong.android.carsdoor.interfa.BmobCallback;
+import com.chenhong.android.carsdoor.module.QueryData;
 import com.chenhong.android.carsdoor.utils.CacheUtils;
 import com.chenhong.android.carsdoor.utils.MyUtils;
+import com.chenhong.android.carsdoor.utils.NetWorkUtils;
 import com.chenhong.android.carsdoor.view.CustomPtrHeader;
-import com.chenhong.android.carsdoor.view.cycleview.ImageCycleView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
@@ -55,8 +45,8 @@ public class NewsBuyFragment extends BaseFragment
 	private PtrFrameLayout mPtrFrameLayout;
 	@ViewInject(R.id.load_more_list_view_container)
 	private LoadMoreListViewContainer loadMoreListViewContainer;
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
+
 	private CustomPtrHeader header;
 	private List<NewsBuy> newslist = new ArrayList<NewsBuy>();
 	private  boolean isUpdate=false;
@@ -81,7 +71,7 @@ public class NewsBuyFragment extends BaseFragment
 			@Override
 			public void onLoadMore(LoadMoreContainer loadMoreContainer) {
 				isUpdate=true;
-				queryData(curPage, STATE_MORE);
+				QueryData(curPage, STATE_MORE);
 
 			}
 		});
@@ -115,12 +105,114 @@ public class NewsBuyFragment extends BaseFragment
 			@Override
 			public void onRefreshBegin(PtrFrameLayout frame) {
 				isUpdate=true;
-				queryData(0, STATE_REFRESH);
+				QueryData(0, STATE_REFRESH);
 
 			}
 
 		});
 	}
+
+
+
+    private void QueryData(final int pages, final int actionType){
+
+        QueryData queryData=new QueryData(new BmobCallback() {
+            @Override
+            public void LoadComplete(List  list) {
+                if (list.size() > 0) {
+                    if (actionType == STATE_REFRESH) {
+                        // 当是下拉刷新操作时，将当前页的编号重置为0，并把集合清空，重新添加
+                        curPage = 0;
+                        lv_news_imp.setVisibility(View.VISIBLE);
+                    }
+                    if (adapter != null) {
+                        if (list!= null) {
+                            loadMoreListViewContainer.loadMoreFinish(false, true);
+                        } else {
+                            loadMoreListViewContainer.loadMoreFinish(true, false);
+                        }
+                        adapter.refreshDatas(list);
+                        adapter.notifyDataSetChanged();
+                    } else {
+                        adapter = new NewsBuyAdapter(getActivity().getApplicationContext(), list);
+                        lv_news_imp.setAdapter(adapter);
+                    }
+                    // 这里在每次加载完数据后，将当前页码+1，这样在上拉刷新的onPullUpToRefresh方法中就不需要操作curPage了
+                    curPage++;
+                    mPtrFrameLayout.refreshComplete();
+                    isUpdate = false;
+                } else if (actionType == STATE_MORE) {
+                    if (isUpdate) {
+                        loadMoreListViewContainer.loadMoreFinish(true, false);
+                        isUpdate = false;
+                    }
+                } else if (actionType == STATE_REFRESH) {
+                    if (isUpdate) {
+                        mPtrFrameLayout.refreshComplete();
+                        isUpdate = false;
+                    }
+                    MyUtils.showToast(getActivity(), "没有数据");
+                }
+            }
+
+            @Override
+            public void LoadError(BmobException e) {
+                if (actionType == STATE_REFRESH) {
+                    isUpdate=false;
+                    mPtrFrameLayout.refreshComplete();
+                    if(!NetWorkUtils.isNetworkAvailable(getActivity())){
+                        lv_news_imp.setVisibility(View.GONE);
+                    }
+                } else if (actionType == STATE_MORE) {
+                    if (isUpdate) {
+                        loadMoreListViewContainer.loadMoreFinish(true, false);
+                        isUpdate = false;
+                        MyUtils.showToast(getActivity(), "没有更多数据了");
+                    }
+                }
+            }
+
+            @Override
+            public void LoadStart(BmobQuery  query) {
+                int page=pages;
+                query.order("-bid");
+                //执行查询方法
+                if(actionType == STATE_MORE){
+                    // 只查询大于等于nid0的数据
+                    query.addWhereGreaterThanOrEqualTo("bid", 0);
+                    // 跳过之前页数并去掉重复数据
+                    query.setSkip(page * count+1);
+                }else{
+                    page=0;
+                    //跳过第多少条数据，分页时用到，获取下一页数据
+                    query.setSkip(page);
+                }
+                // 设置每页数据个数
+                query.setLimit(count);
+                // 查找数据
+                final int finalPage = page;
+                if(NetWorkUtils.isNetworkAvailable(getActivity())){
+                    Log.e("tazzz","可用网络");
+                    //缓存
+                    query.setCachePolicy(BmobQuery.CachePolicy.NETWORK_ELSE_CACHE);
+                }else {
+                    Log.e("tazzz","不可用网络");
+                    query.setCachePolicy(BmobQuery.CachePolicy.CACHE_ONLY);
+                }
+
+            }
+        });
+        queryData.queryFirstData();
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,7 +250,6 @@ public class NewsBuyFragment extends BaseFragment
 							curPage = 0;
 							newslist.clear();
 							lv_news_imp.setVisibility(View.VISIBLE);
-							layout_nodata.setVisibility(View.GONE);
 						}
 						newslist.addAll(list);
 						if (adapter != null) {

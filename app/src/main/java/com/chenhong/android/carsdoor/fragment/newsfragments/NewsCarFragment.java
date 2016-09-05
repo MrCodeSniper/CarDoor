@@ -6,41 +6,29 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.chenhong.android.carsdoor.R;
 import com.chenhong.android.carsdoor.activity.NewsDetailActivity;
-import com.chenhong.android.carsdoor.activity.PictureActivity;
 import com.chenhong.android.carsdoor.adapter.NewCarAdapter;
-import com.chenhong.android.carsdoor.adapter.NewsImportantAdapter;
 import com.chenhong.android.carsdoor.entity.NewCar;
 import com.chenhong.android.carsdoor.entity.NewsTitle;
-import com.chenhong.android.carsdoor.entity.news_important;
 import com.chenhong.android.carsdoor.fragment.BaseFragment;
-import com.chenhong.android.carsdoor.fragment.NewsFragment;
-import com.chenhong.android.carsdoor.global.Constant;
-import com.chenhong.android.carsdoor.interf.OnScrollYListener;
 import com.chenhong.android.carsdoor.utils.CacheUtils;
 import com.chenhong.android.carsdoor.utils.DisplayUtil;
 import com.chenhong.android.carsdoor.utils.MyUtils;
 import com.chenhong.android.carsdoor.view.CustomPtrHeader;
-import com.chenhong.android.carsdoor.view.cycleview.ImageCycleView;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -70,8 +58,8 @@ public class NewsCarFragment extends BaseFragment implements AdapterView.OnItemC
 	private PtrFrameLayout mPtrFrameLayout;
 	@ViewInject(R.id.load_more_list_view_container)
 	private LoadMoreListViewContainer loadMoreListViewContainer;
-	@ViewInject(R.id.layout_no)
-	private LinearLayout layout_nodata;
+
+
 	private CustomPtrHeader header;
 	private List<String> networkImages=new ArrayList<>();
 	private  boolean isUpdate=false;
@@ -267,7 +255,6 @@ public class NewsCarFragment extends BaseFragment implements AdapterView.OnItemC
 							curPage = 0;
 							newCarList.clear();
 							lv_newcar.setVisibility(View.VISIBLE);
-							layout_nodata.setVisibility(View.GONE);
 						}
 						newCarList.addAll(list);
 						if (adapter != null) {
@@ -303,7 +290,6 @@ public class NewsCarFragment extends BaseFragment implements AdapterView.OnItemC
 					if (actionType == STATE_REFRESH) {
 						mPtrFrameLayout.refreshComplete();
 						lv_newcar.setVisibility(View.GONE);
-						layout_nodata.setVisibility(View.VISIBLE);
 					} else if (actionType == STATE_MORE) {
 						if (isUpdate) {
 							loadMoreListViewContainer.loadMoreFinish(true, false);
