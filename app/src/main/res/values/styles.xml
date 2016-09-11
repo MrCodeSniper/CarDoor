@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/AppTheme.TranslucentActionBar</item>
         <item name="actionBarStyle">@style/AppTheme.TranslucentActionBar</item>
+        <item name="android:windowBackground">@drawable/logo_splash</item>
     </style>
 
 

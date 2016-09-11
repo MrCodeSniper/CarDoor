@@ -361,8 +361,11 @@
 
    <activity android:name=".activity.MogoActivity"></activity>
 
-
-
+        <service android:name=".service.InitService">
+        <intent-filter>
+            <action android:name="com.chenhong.android.carsdoor.service.InitService.INIT"></action>
+        </intent-filter>
+        </service>
     </application>
 
 </manifest>

@@ -1,19 +1,15 @@
 package com.chenhong.android.carsdoor.application;
 
 
-
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Debug;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.chenhong.android.carsdoor.exception.BaseExceptionHandler;
+import com.chenhong.android.carsdoor.service.InitService;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-
-import cn.bmob.v3.Bmob;
-import cn.jpush.android.api.JPushInterface;
-import cn.sharesdk.framework.ShareSDK;
 
 
 public abstract class BaseApplication extends Application {
@@ -29,14 +25,10 @@ public abstract class BaseApplication extends Application {
 
 
 		applicationcontext = getApplicationContext();
-		//第一：默认初始化
-		Bmob.initialize(this, "889d433bebc0a39ddcc156c085fd84e2");
-		SDKInitializer.initialize(getApplicationContext());
-
-		JPushInterface.setDebugMode(true);
-		JPushInterface.init(this);
-
 		sp = getSharedPreferences("user", MODE_PRIVATE);
+		Debug.startMethodTracing("CarsDoor");
+		applicationcontext = getApplicationContext();
+
 //		if (getDefaultUncaughtExceptionHandler() == null) {
 //			Thread.setDefaultUncaughtExceptionHandler(new LocalFileHandler(
 //					applicationcontext));
@@ -48,8 +40,9 @@ public abstract class BaseApplication extends Application {
 		ImageLoaderConfiguration configuration = ImageLoaderConfiguration
 				.createDefault(this);
 		ImageLoader.getInstance().init(configuration);
-		//初始化sharesdk
-		ShareSDK.initSDK(this);
+		InitService.start(this);
+		Debug.stopMethodTracing();
+
 
 
 
