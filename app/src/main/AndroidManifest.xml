@@ -67,6 +67,11 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
 
+
+
+
+
+
     <!-- Required -->
     <permission
         android:name="com.chenhong.android.carsdoor.permission.JPUSH_MESSAGE"
@@ -366,6 +371,13 @@
             <action android:name="com.chenhong.android.carsdoor.service.InitService.INIT"></action>
         </intent-filter>
         </service>
+
+
+
+        <meta-data android:value="57bbb8c467e58e4cf80002d0" android:name="UMENG_APPKEY"></meta-data>
+
+
+
     </application>
 
 </manifest>

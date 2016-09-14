@@ -27,6 +27,7 @@ import com.chenhong.android.carsdoor.interf.OnTabReselectListener;
 import com.chenhong.android.carsdoor.ui.MainTab;
 import com.chenhong.android.carsdoor.utils.FileUtils;
 import com.chenhong.android.carsdoor.utils.MyUtils;
+import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -383,7 +384,14 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
     }
 
 
-
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 
 
 

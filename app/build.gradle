@@ -1,11 +1,26 @@
 apply plugin: 'com.android.application'
+apply plugin: 'packer'
+
+packer {
+    // 指定渠道打包输出目录
+    archiveOutput = file(new File(project.rootProject.buildDir.path, "apks"))
+    // 指定渠道打包输出文件名格式
+    archiveNameFormat = '${appPkg}-${flavorName}-${buildType}-v${versionName}-${versionCode}'
+    // 指定渠道打包需要修改的AndroidManifest文件项
+    manifestMatcher = ['UMENG_CHANNEL','Promotion_Market']
+    // 指定是否使用build版本号自增
+    buildNumberAuto = true
+    // 指定使用版本号自增的buildType，默认是全部
+    buildNumberTypeMatcher = ['release', 'beta']
+
+}
 
 android {
     signingConfigs {
         config {
-            keyAlias 'my'
+            keyAlias 'myapp'
             keyPassword 'q63857952'
-            storeFile file('C:/my.jks')
+            storeFile file('C:/myapp.jks')
             storePassword 'q63857952'
         }
     }
@@ -36,8 +51,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
-    productFlavors {
-    }
 
 
 }
@@ -55,6 +68,8 @@ repositories{
 
 
 dependencies {
+
+    compile 'com.umeng.analytics:analytics:latest.integration'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.github.manuelpeinado.fadingactionbar:fadingactionbar:3.1.2'
     compile 'de.hdodenhof:circleimageview:2.1.0'
