@@ -8,4 +8,4 @@
  1. 使用TraceView检查了application的第三方SDK初始化的耗时并将耗时操作放入intentService
  2. 使用placeholder UI将APP主题背景图片换成相适配的logo背景-解决了白屏问题
  3. 重新创建APP启动页面 不进行UI渲染等待而是调转到APP引导页 优化启动时间
-
+> - day5.集成了有盟统计sdk并成功多渠道打包上线到各大应用市场
