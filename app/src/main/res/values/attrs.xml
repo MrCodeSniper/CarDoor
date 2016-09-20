@@ -85,4 +85,16 @@
         <attr name="AniForeColor" format="color" />
         <attr name="CircleSmaller" format="integer"/>
     </declare-styleable>
+
+
+    <!-- 自定义属性 -->
+    <attr name="root_view_bg" format="reference|color" />
+    <!--<attr name="btn_bg" format="reference|color" />-->
+    <attr name="text_color" format="reference|color" />
+
+
+
+
+
+
 </resources>

@@ -58,6 +58,17 @@
 
 
 
+    <!-- 日间主题 -->
+    <style name="DayTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_day</item>
+        <item name="text_color">@color/black_tx_color</item>
+    </style>
+
+    <!-- 夜间主题 -->
+    <style name="NightTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_night</item>
+        <item name="text_color">@color/white_tx_color</item>
+    </style>
 
 
 
