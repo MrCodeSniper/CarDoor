@@ -55,4 +55,34 @@
 
 
 
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_saoyisao"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_sao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫一扫"
+            android:textSize="15sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
 </LinearLayout>

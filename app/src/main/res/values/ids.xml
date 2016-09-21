@@ -2,4 +2,14 @@
 <resources>
     <item type="id" name="tag_first"></item>
     <item type="id" name="tag_second"></item>
+
+
+
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+
 </resources>

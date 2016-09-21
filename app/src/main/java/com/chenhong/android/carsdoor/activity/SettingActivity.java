@@ -1,19 +1,29 @@
 package com.chenhong.android.carsdoor.activity;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.hardware.camera2.CaptureRequest;
+import android.hardware.camera2.CaptureResult;
+import android.net.Uri;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.adsmogo.offers.MogoOffer;
 import com.adsmogo.offers.MogoOfferPointCallBack;
 import com.chenhong.android.carsdoor.R;
+import com.chenhong.android.carsdoor.global.Constant;
 import com.chenhong.android.carsdoor.ui.Colorful;
+import com.chenhong.android.carsdoor.ui.MainTab;
 import com.chenhong.android.carsdoor.ui.setter.ViewGroupSetter;
+
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
+import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 /**
  * Created by Android on 2016/9/5.
@@ -29,8 +39,19 @@ private RelativeLayout rl_app;
     private Switch aSwitch;
     @ViewInject(R.id.root_view)
     private LinearLayout ll_root_view;
+
+
+    @ViewInject(R.id.tv_sao)
+    private TextView tv_sao;
+
     Activity activity;
     public static String mogoID = "39658de63f2747da9fcc111f98b539cd";
+
+
+    @ViewInject(R.id.rl_saoyisao)
+    private RelativeLayout rl_saoyisao;
+
+
     @Override
     protected void initView() {
         activity = this;
@@ -58,6 +79,12 @@ private RelativeLayout rl_app;
     @OnClick(R.id.rl_app)
     public void onClick(View view){
         MogoOffer.showOffer(activity);
+    }
+
+
+    @OnClick(R.id.rl_saoyisao)
+    public void onClickSao(View view){
+             startActivityForResult(new Intent(SettingActivity.this, CaptureActivity.class),0);
     }
 
 
@@ -125,4 +152,20 @@ private RelativeLayout rl_app;
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            Bundle bundle=data.getExtras();
+            String result=bundle.getString("result");
+            Uri uri = Uri.parse(result);
+
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+
+            startActivity(intent);
+
+        }
+
+
+    }
 }
